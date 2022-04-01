@@ -16,6 +16,20 @@ framework:
     #fragments: true
     php_errors:
         log: true
+    
+    http_client:
+        scoped_clients:
+            example_api:
+                base_uri: 'https://test.campagnes-m-call.fr/'
+
+                # HTTP Basic authentication
+                auth_basic: 'ines:qnvYSR9v0mkLvSfY'
+
+                # HTTP Bearer authentication (also called token authentication)
+                auth_bearer: the-bearer-token
+
+                # Microsoft NTLM authentication
+                auth_ntlm: 'ines:qnvYSR9v0mkLvSfY'
 
 when@test:
     framework:
